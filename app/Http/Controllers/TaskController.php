@@ -15,4 +15,15 @@ class TaskController extends Controller
     {
         $this->middleware('auth');
     }
+
+    /**
+     * ユーザーの全タスクをリスト表示
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function index(Request $request)
+    {
+        return view('tasks.index');
+    }
 }
