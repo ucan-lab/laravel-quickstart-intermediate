@@ -26,4 +26,19 @@ class TaskController extends Controller
     {
         return view('tasks.index');
     }
+
+    /**
+     * 新タスク作成
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|max:255',
+        ]);
+
+        // タスクの作成…
+    }
 }
