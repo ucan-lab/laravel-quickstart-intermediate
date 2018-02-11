@@ -64,10 +64,10 @@ class TaskController extends Controller
      * 指定タスクの削除
      *
      * @param  Request  $request
-     * @param  string  $taskId
+     * @param  Task  $task
      * @return Response
      */
-    public function destroy(Request $request, Task $taskId)
+    public function destroy(Request $request, Task $task)
     {
         //
     }
