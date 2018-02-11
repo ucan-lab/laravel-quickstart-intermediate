@@ -28,7 +28,7 @@ class TaskController extends Controller
     }
 
     /**
-     * 新タスク作成
+     * 新しいタスクの作成
      *
      * @param  Request  $request
      * @return Response
@@ -39,6 +39,10 @@ class TaskController extends Controller
             'name' => 'required|max:255',
         ]);
 
-        // タスクの作成…
+        $request->user()->tasks()->create([
+            'name' => $request->name,
+        ]);
+
+        return redirect('/tasks');
     }
 }
