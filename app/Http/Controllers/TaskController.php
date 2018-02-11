@@ -59,4 +59,16 @@ class TaskController extends Controller
 
         return redirect('/tasks');
     }
+
+    /**
+     * 指定タスクの削除
+     *
+     * @param  Request  $request
+     * @param  string  $taskId
+     * @return Response
+     */
+    public function destroy(Request $request, Task $taskId)
+    {
+        //
+    }
 }
